@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Container, Typography } from "@material-ui/core";
 
 const AddClient = () => {
-    return (
-        <>
-            
-        </>
-    )
-}
+  return (
+    <Container>
+      <Typography>AGENDA TU RECAMBIO</Typography>
+    </Container>
+  );
+};
 
-export default AddClient
+export default AddClient;
