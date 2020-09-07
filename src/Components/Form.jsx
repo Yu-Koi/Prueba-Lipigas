@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     width: "100%",
     margin: theme.spacing(3, 0, 2),
-    backgroundColor: "#000080",
+    backgroundColor: "#002ab3",
     height: "1.8rem",
     flexGrow: 1,
   },

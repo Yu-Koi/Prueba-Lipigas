@@ -7,7 +7,8 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 import { v4 as uuidv4} from 'uuid';
 
-import GetApi from '../services/GetApi';
+
+import AvailableHours from '../pages/AvailableHours';
 
 const Hours = (props) => {
     console.log(props)
@@ -74,6 +75,7 @@ const [confirm, setConfirm] = useState(false);
 
   return (
     <Fragment>
+       
 
     
       <Grid continer>

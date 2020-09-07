@@ -7,6 +7,8 @@ import DatePicker from "react-horizontal-datepicker";
 import  {registerLocale} from 'react-datepicker';
 
 
+
+
 registerLocale("es", es)
 
 const Header = () => {
@@ -15,11 +17,18 @@ const Header = () => {
 
     }
 
-    const [selectDate, setSelectDate] = useState(null);
+    // const [selectDate, setSelectDate] = useState(null);
 
     
 
-//     const [selectDate, setSelectDate] = useState(null);
+    const [selectDate, setSelectDate] = useState(null);
+
+   const saveVisit = () => {
+        console.log('SAVING VISIT');
+        const options = {weekday:'long', month:'short', day: 'numeric'};
+        alert(selectDate.toLocaleDateString('es-ES', options));
+      
+    }
 
 
 //    const saveVisit = () => {
@@ -67,6 +76,8 @@ const Header = () => {
         
       />
     </div>
+
+   
 
 
 
