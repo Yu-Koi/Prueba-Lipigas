@@ -14,6 +14,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     marginTop: "2rem",
   },
+  conatiner: {
+    margin: theme.spacing(8, 0, 4),
+    display: "flex",
+    textAlign: "center",
+    flexGrow: 1,
+
+
+  },
   submit: {
     width: "100%",
     margin: theme.spacing(6, 0, 2),
@@ -62,7 +70,7 @@ const AvailableHours = (props) => {
     setRangeSeven(hoursAvailable.nineteenToTwentyone);
   };
 
-  // const [value, setValue] = useState('')
+  
   const [selectHour, setSelectHour] = useState(true);
 
   const handleClick = () => {
@@ -106,7 +114,7 @@ const AvailableHours = (props) => {
 
   return (
     <Fragment>
-      <Container>
+      <Container className={classes.container}>
         <Header />
         <Grid container className={classes.root}>
           <form onSubmit={createVisit}>
@@ -115,7 +123,7 @@ const AvailableHours = (props) => {
                 <Button
                   value={value}
                   index={0}
-                  name="uno"
+                  name="7:00-09:00"
                   onChange={handleChange}
                   onClick={handleClick}
                   className={classes.selected}
@@ -133,7 +141,7 @@ const AvailableHours = (props) => {
                 <Button
                   value={value}
                   index={1}
-                  name="dos"
+                  name="09:00-11:00"
                   selected={selectHour}
                   onChange={handleChange}
                   onClick={handleClick}
@@ -151,7 +159,7 @@ const AvailableHours = (props) => {
                 <Button
                   value={value}
                   index={2}
-                  name="tres"
+                  name="11:00-13:00"
                   selected={selectHour}
                   onChange={handleChange}
                   onClick={handleClick}
@@ -170,6 +178,7 @@ const AvailableHours = (props) => {
                 <Button
                   value={value}
                   index={3}
+                  name="13:00-15:00"
                   onChange={handleChange}
                   onClick={handleClick}
                   value="13:00 a 15:00"
@@ -186,9 +195,9 @@ const AvailableHours = (props) => {
               {rangeFive ? (
                 <Button
                   value={value}
+                  name="15:00-17:00"
                   onChange={handleChange}
                   onClick={handleClick}
-                  value="15:00 a 17:00"
                   id="5"
                 >
                   15:00 a 17:00
@@ -202,6 +211,7 @@ const AvailableHours = (props) => {
               {rangeSix ? (
                 <Button
                   value={value}
+                  name="17:00-19:00"
                   index={5}
                   onChange={handleChange}
                   onClick={handleClick}
@@ -218,6 +228,7 @@ const AvailableHours = (props) => {
               {rangeSeven ? (
                 <Button
                   value={value}
+                  name="19:00-21:00"
                   index={6}
                   onChange={handleChange}
                   onClick={handleClick}
