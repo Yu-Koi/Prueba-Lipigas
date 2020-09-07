@@ -1,11 +1,29 @@
-import React from 'react';
+import React from "react";
+import { Button } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
-const Button = () => {
-    return (
-        <>
-            
-        </>
-    )
-}
+const useStyles = makeStyles((theme) => ({
+  submit: {
+    width: "100%",
+    margin: theme.spacing(3, 0, 2),
+  },
+}));
 
-export default Button
+const ButtonSumit = () => {
+  const classes = useStyles();
+
+  return (
+    <>
+      <Button
+        className={classes.submit}
+        type="submit"
+        variant="contained"
+        color="primary"
+        disableElevation
+      >    
+      </Button>
+    </>
+  );
+};
+
+export default ButtonSumit;

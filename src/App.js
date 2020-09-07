@@ -3,13 +3,22 @@ import { Route } from "react-router-dom";
 import "./App.css";
 
 import AddClient from "./pages/AddClient";
-import VisitingHours from "./pages/VisitingHours";
+import GetApi from "./services/GetApi";
+import Calendario from "./Components/Calendario";
+import DatePickers from "./pages/DatePickers";
+import Confirm  from "./Components/Confirm ";
+import Header  from "./Components/Header";
+import Hours from "./Components/Hours";
+
 
 function App() {
   return (
+   
     <>
-      <Route exact path="/" component={AddClient} />
-      <Route path="/agenda" component={VisitingHours} />
+     {/* <GetApi /> */}
+      <Route exact path="/" component={GetApi} />
+      {/* <Route path="/agenda" component={DatePickers} /> */}
+      <Route path="/confirm" component={Confirm} />
     </>
   );
 }
