@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
     margin: theme.spacing(8, 0, 8),
-   
   },
   media: {
     height: 140,
@@ -23,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     margin: theme.spacing(3, 0, 2),
     backgroundColor: "#002ab3",
-    height: "1.8rem",
+    height: "2.2rem",
     flexGrow: 1,
   },
 }));
@@ -50,15 +49,11 @@ const Visit = (props) => {
                 Se agendará el siguiente recambio:
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-               
-                  Fecha<span></span>
-                
+                Fecha<span></span>
               </Typography>
 
               <Typography variant="body2" color="textSecondary" component="p">
-               
-                  Hora<span></span>
-                
+                Hora<span></span>
               </Typography>
             </CardContent>
           </CardActionArea>

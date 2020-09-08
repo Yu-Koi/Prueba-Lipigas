@@ -1,11 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { withRouter } from "react-router-dom";
-import {
-  Button,
-  FormHelperText,
-  Grid,
-} from "@material-ui/core";
+import { Button, FormHelperText, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 
@@ -25,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     margin: theme.spacing(3, 0, 2),
     backgroundColor: "#002ab3",
-    height: "1.8rem",
+    height: "2.2rem",
     flexGrow: 1,
   },
   input: {

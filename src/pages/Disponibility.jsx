@@ -78,15 +78,10 @@ const AvailableHours = (props) => {
 
   //Stado de
 
-  const [value, setValue] = React.useState([
-    { name: "7:00 a 9:00", id: uuidv4() },
-    { name: "9:00 a 11:00", id: uuidv4() },
-    { name: "11:00 a 13:00", id: uuidv4() },
-    { name: "13:00 a 15:00", id: uuidv4() },
-    { name: "17:00 a 19:00", id: uuidv4() },
-    { name: "19:00 a 21:00", id: uuidv4() },
-    { name: "21:00 a 22:00", id: uuidv4() },
-  ]);
+  const [value, setValue] = React.useState({
+    name: "",
+    id: "",
+  });
 
   const handleChange = (e) => {
     console.log(e);
@@ -114,6 +109,26 @@ const AvailableHours = (props) => {
     props.history.push("/confirm");
   };
 
+  // const optionsData = [
+  //   { id: uuidv4(), name: "7:00 a 9:00" },
+  //   { id: uuidv4(), name: "9:00 a 11:00" },
+  //   { id: uuidv4(), name: "11:00 a 13:00" },
+  //   { id: uuidv4(), name: "13:00 a 15:00" },
+  //   { id: uuidv4(), name: "17:00 a 19:00" },
+  //   { id: uuidv4(), name: "19:00 a 21:00" },
+  //   { id: uuidv4(), name: "21:00 a 22:00" },
+  // ];
+
+  // const [hours, setHours] = useState('')
+
+  // const getHours = (e) => {
+  //   console.log(hours)
+  //   e.preventDefault();
+  //   hours.id = uuidv4();
+  //   setHours = [...hours];
+
+  // }
+
   return (
     <Fragment>
       <Container className={classes.container}>
@@ -125,13 +140,14 @@ const AvailableHours = (props) => {
                 <Button
                   value={value}
                   index={0}
-                  name="7:00 - 09:00"
+                  name="uno"
                   onClick={handleChange}
+                  
                 >
-                  7:00 - 09:00
+                  7:00 a 09:00
                 </Button>
               ) : (
-                <Button disabled>7:00 - 09:00</Button>
+                <Button disabled>7:00 a 09:00</Button>
               )}
             </Grid>
 
@@ -140,13 +156,14 @@ const AvailableHours = (props) => {
                 <Button
                   value="segundo"
                   index={1}
-                  name="09:00 - 11:00"
+                  name="uno"
                   onClick={handleChange}
+                  
                 >
-                  09:00 - 11:00
+                  09:00 a 11:00
                 </Button>
               ) : (
-                <Button disabled>09:00 - 11:00</Button>
+                <Button disabled>09:00 a 11:00</Button>
               )}
             </Grid>
 
@@ -155,13 +172,15 @@ const AvailableHours = (props) => {
                 <Button
                   value={value}
                   index={2}
-                  name="11:00 - 13:00"
+                  name="11:00-13:00"
                   onClick={handleChange}
+                  value="11:00 a 13:00"
+                  
                 >
-                  11:00 - 13:00
+                  11:00 a 13:00
                 </Button>
               ) : (
-                <Button disabled>11:00 - 13:00</Button>
+                <Button disabled>11:00 a 13:00</Button>
               )}
             </Grid>
 
@@ -170,13 +189,15 @@ const AvailableHours = (props) => {
                 <Button
                   value={value}
                   index={3}
-                  name="13:00 - 15:00"
+                  name="13:00-15:00"
                   onClick={handleChange}
+                  value="13:00 a 15:00"
+                 
                 >
-                  13:00 - 15:00
+                  13:00 a 15:00
                 </Button>
               ) : (
-                <Button disabled>13:00 - 15:00</Button>
+                <Button disabled>13:00 a 15:00</Button>
               )}
             </Grid>
 
@@ -184,14 +205,14 @@ const AvailableHours = (props) => {
               {rangeFive ? (
                 <Button
                   value={value}
-                  index={4}
-                  name="15:00 - 17:00"
+                  name="15:00-17:00"
                   onClick={handleChange}
+                  
                 >
-                  15:00 - 17:00
+                  15:00 a 17:00
                 </Button>
               ) : (
-                <Button disabled>15:00 - 17:00</Button>
+                <Button disabled>15:00 a 17:00</Button>
               )}
             </Grid>
 
@@ -199,14 +220,15 @@ const AvailableHours = (props) => {
               {rangeSix ? (
                 <Button
                   value={value}
+                  name="17:00-19:00"
                   index={5}
-                  name="17:00 - 19:00"
                   onClick={handleChange}
+                 
                 >
-                  17:00 - 19:00
+                  17:00 a 19:00
                 </Button>
               ) : (
-                <Button disabled>17:00 - 19:00</Button>
+                <Button disabled>17:00 a 19:00</Button>
               )}
             </Grid>
 
@@ -214,14 +236,15 @@ const AvailableHours = (props) => {
               {rangeSeven ? (
                 <Button
                   value={value}
+                  name="19:00-21:00"
                   index={6}
-                  name="19:00 - 21:00"
                   onClick={handleChange}
+                  
                 >
-                  19:00 - 21:00
+                  19:00 a 21:00
                 </Button>
               ) : (
-                <Button disabled>19:00 - 21:00</Button>
+                <Button disabled>19:00 a 21:00</Button>
               )}
             </Grid>
 
